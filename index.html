@@ -15,9 +15,8 @@ var CONFIG = {
   // Dòng ký tên, hiện ở cuối thiệp.
   signature: "Học trò của thầy cô",
 
-  // File nhạc thật. Ví dụ: "nhac.mp3" hoặc một đường dẫn http.
-  // Để trống "" nếu muốn dùng giai điệu piano/chuông tự tạo.
-  MUSIC_URL: "",
+  // File nhạc Người gieo mầm xanh đã được tải lên cùng thư mục.
+  MUSIC_URL: "nguoi-gieo-mam-xanh.mp3",
 
   // Âm lượng lúc vừa mở thiệp, từ 0 đến 100. Nên để thấp.
   volume: 30,
@@ -28,8 +27,8 @@ var CONFIG = {
   // Lời tri ân. Mỗi đoạn cách nhau bằng một dòng trống.
   tribute:
     "Thưa thầy cô,\n\n" +
-    "Em nhớ một buổi chiều mưa, cả lớp ồn, chỉ có giọng thầy cô là vẫn đều. Thầy cô không nói lớn. Thầy cô đứng cạnh bảng, viết chậm, rồi quay xuống hỏi đúng bạn đang cúi mặt: «Em thử nói xem, cô nghe.» Những lúc như thế, chúng em mới hiểu mình không bị bỏ lại.\n\n" +
-    "Ngày Nhà giáo Việt Nam năm nay, chúng em muốn nói điều vẫn hay quên nói. Cảm ơn thầy cô đã chấm những bài dài sau khi tan trường, đã sửa một dấu phẩy mà chúng em tưởng không quan trọng, đã nhắn một câu khi điểm kiểm tra làm chúng em cụp mắt. Kiến thức rồi sẽ cũ. Cách thầy cô đối xử với một đứa học trò đang sợ bị gọi lên bảng thì không cũ.\n\n" +
+    "Em nhớ một buổi chiều mưa, cả lớp ồn, chỉ có giọng thầy cô là vẫn đều. Thầy cô không nói lớn. Thầy cô đứng cạnh bảng, viết chậm, rồi quay xuống nhìn đứa đang cúi mặt. Thầy cô không hỏi lớn. Thầy cô đợi. Những lúc như thế, chúng em mới hiểu: \"Em thử nói xem, cô nghe.\" Những lúc như thế, chúng em mới hiểu mình không bị bỏ lại.\n\n" +
+    "Ngày Nhà giáo Việt Nam năm nay, chúng em muốn nói điều vẫn hay quên nói. Cảm ơn thầy cô đã chấm những bài dài sau khi tan trường, đã sửa một dấu phẩy, đã nhắc chúng em tử tế với người không quen, đã nhận một câu \"không sao\" khi điềm khiêm trầm làm chúng em cúp mặt. Kiên nhẫn rồi sẽ có ý nghĩa. Cách thầy cô đối xử với một người đã dạy chúng em rằng sự tử tế có thể lan bằng thì không cần chờ.\n\n" +
     "Chúng em lớn lên, đổi lớp, rồi đi xa. Vẫn còn những câu thầy cô nói năm ấy, nằm trong cách chúng em làm việc và cách chúng em nói với người khác. Thiệp này nhỏ. Lòng biết ơn thì không nhỏ.",
 
   gratitudes: [
@@ -1299,7 +1298,7 @@ var CONFIG = {
     void wish.offsetWidth;
     wish.textContent = list[index];
     wish.classList.add("show");
-    document.getElementById("hint").textContent = "Chạm lần nữa để nhận một lời chúc khác.";
+    document.getElementById("hint").textContent = "Chúc thầy cô nhận được thật nhiều niềm vui.";
     var rect = present.getBoundingClientRect();
     burst(rect.left + rect.width / 2, rect.top + rect.height * 0.35);
     playSparkle();
@@ -1399,11 +1398,11 @@ var CONFIG = {
 <!--
 HƯỚNG DẪN ĐƯA THIỆP LÊN MẠNG
 
-Thiệp này là một file index.html. Mở file bằng trình duyệt là xem được trên máy mình.
+Thiệp này là một file index.html. Mở file bằng trình duyệt để xem được trên máy mình.
 Muốn gửi link cho thầy cô thì đưa file lên một chỗ lưu trang tĩnh.
 
 1) GitHub Pages
-   - Tạo một repository mới trên GitHub (có thể để public).
+   - Tạo một repository mới trên GitHub (có thể để ở chế độ public).
    - Upload file index.html. Nếu có nhạc riêng, upload thêm file mp3 và sửa MUSIC_URL thành "ten-file.mp3".
    - Vào Settings > Pages, mục Build and deployment chọn Deploy from a branch.
    - Branch: main, folder: / (root), bấm Save.
@@ -1414,5 +1413,5 @@ Muốn gửi link cho thầy cô thì đưa file lên một chỗ lưu trang tĩ
    - Kéo cả thư mục chứa index.html (và file mp3 nếu có) vào trang đó.
    - Netlify cấp ngay một đường link. Có thể đổi tên site trong phần cài đặt.
 
-Nên dùng file nhạc do mình có quyền sử dụng. Để MUSIC_URL trống nếu muốn giữ giai điệu piano tạo sẵn trong trang.
+Nếu không dùng file nhạc do mình có quyền sử dụng, để MUSIC_URL trống để dùng giai điệu piano tự tạo sẵn trong trang.
 -->
